@@ -21,7 +21,7 @@
 
   <ng-container matColumnDef="dataInicio">
     <th mat-header-cell *matHeaderCellDef class="cabecalho"> Data de início da pesquisa </th>
-    <th mat-cell *matCellDef="let element"> {{element.dataInicio | date:'dd/MM/yyyy'}} </th>
+    <th mat-cell *matCellDef="let element"> {{element.dataInicioPesquisa | date:'dd/MM/yyyy'}} </th>
   </ng-container>
 
   <ng-container matColumnDef="responsavel">
@@ -36,9 +36,9 @@
 <section id="botoes">
   <div class="example-button-row">
     <button mat-flat-button color="primary" (click)="buscarVacina()">Buscar todas</button>
-    <button mat-flat-button color="accent"  (click)="buscarPorId()">Buscar por id</button>
-    <button mat-flat-button color="accent"  (click)="buscarPorPesquisador()">Buscar por pesquisador</button>
-    <button mat-flat-button color="warn"    (click)="voltar()">Voltar</button>
+    <button mat-flat-button color="accent" (click)="buscarPorId()">Buscar por id</button>
+    <button mat-flat-button color="accent" (click)="buscarPorPesquisador()">Buscar por pesquisador</button>
+    <button mat-flat-button color="warn" (click)="voltar()">Voltar</button>
   </div>
 </section>
 
