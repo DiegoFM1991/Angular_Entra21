@@ -5,7 +5,6 @@ import { MatTableModule } from '@angular/material/table';
 import { VacinasRoutingModule } from './vacinas-routing.module';
 import { VacinaListagemComponent } from './vacina-listagem/vacina-listagem.component';
 
-
 @NgModule({
   declarations: [
     VacinaListagemComponent

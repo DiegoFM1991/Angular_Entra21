@@ -1,1 +1,46 @@
-<p>vacina-listagem works!</p>
+<!-- <p>vacina-listagem works!</p> -->
+<mat-toolbar color="primary">
+    <span>Listagem de vacinas</span>
+</mat-toolbar>
+
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> #ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="paisOrigem">
+    <th mat-header-cell *matHeaderCellDef> Pais de origem </th>
+    <th mat-cell *matCellDef="let element"> {{element.paisOrigem}}</th>
+  </ng-container>
+
+  <ng-container matColumnDef="estagio">
+    <th mat-header-cell *matHeaderCellDef> Estágiod da pesquisa </th>
+    <th mat-cell *matCellDef="let element"> {{element.estagioPesquisa}} </th>
+  </ng-container>
+
+  <ng-container matColumnDef="dataInicio">
+    <th mat-header-cell *matHeaderCellDef> Data de início da pesquisa </th>
+    <th mat-cell *matCellDef="let element"> {{element.dataInicio | date:'dd/MM/yyyy'}} </th>
+  </ng-container>
+
+  <ng-container matColumnDef="responsavel">
+    <th mat-header-cell *matHeaderCellDef> Responsável </th>
+    <td mat-cell *matCellDef="let element"> {{element.responsavel.nome}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row,; columns: displayedColumns;"></tr>
+</table>
+
+<section>
+  <div class="example-button-row">
+    <button mat-flat-button color="primary"> Buscar todas </button>
+    <button mat-flat-button color="accent"> Buscar por id </button>
+    <button mat-flat-button color="accent"> Buscar por pesquisador </button>
+    <button mat-flat-button color="warn"> Voltar </button>
+  </div>
+</section>
+
+<!-- Muito útil para testes -->
+<!-- <pre>{{dataSource | json}}</pre> -->
