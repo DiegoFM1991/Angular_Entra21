@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,7 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
+    AppMaterialModule,
     HttpClientModule,
   ],
   providers: [],

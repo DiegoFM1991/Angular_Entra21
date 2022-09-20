@@ -1,9 +1,8 @@
-import { AppMaterialModule } from './../shared/app-material/app-material.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule } from '@angular/material/table';
-import { VacinasRoutingModule } from './vacinas-routing.module';
+import { NgModule } from '@angular/core';
+import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { VacinaListagemComponent } from './vacina-listagem/vacina-listagem.component';
+import { VacinasRoutingModule } from './vacinas-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import { VacinaListagemComponent } from './vacina-listagem/vacina-listagem.compo
   imports: [
     CommonModule,
     VacinasRoutingModule,
-    MatTableModule,
     AppMaterialModule,
   ]
 })

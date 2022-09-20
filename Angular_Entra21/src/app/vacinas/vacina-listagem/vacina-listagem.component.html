@@ -5,27 +5,27 @@
 
 <table mat-table [dataSource]="dataSource">
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> #ID </th>
+    <th mat-header-cell *matHeaderCellDef class="cabecalho"> #ID </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
 
   <ng-container matColumnDef="paisOrigem">
-    <th mat-header-cell *matHeaderCellDef> Pais de origem </th>
+    <th mat-header-cell *matHeaderCellDef class="cabecalho"> Pais de origem </th>
     <th mat-cell *matCellDef="let element"> {{element.paisOrigem}}</th>
   </ng-container>
 
   <ng-container matColumnDef="estagio">
-    <th mat-header-cell *matHeaderCellDef> Estágiod da pesquisa </th>
+    <th mat-header-cell *matHeaderCellDef class="cabecalho"> Estágiod da pesquisa </th>
     <th mat-cell *matCellDef="let element"> {{element.estagioPesquisa}} </th>
   </ng-container>
 
   <ng-container matColumnDef="dataInicio">
-    <th mat-header-cell *matHeaderCellDef> Data de início da pesquisa </th>
+    <th mat-header-cell *matHeaderCellDef class="cabecalho"> Data de início da pesquisa </th>
     <th mat-cell *matCellDef="let element"> {{element.dataInicio | date:'dd/MM/yyyy'}} </th>
   </ng-container>
 
   <ng-container matColumnDef="responsavel">
-    <th mat-header-cell *matHeaderCellDef> Responsável </th>
+    <th mat-header-cell *matHeaderCellDef class="cabecalho"> Responsável </th>
     <td mat-cell *matCellDef="let element"> {{element.responsavel.nome}} </td>
   </ng-container>
 
@@ -33,12 +33,12 @@
   <tr mat-row *matRowDef="let row,; columns: displayedColumns;"></tr>
 </table>
 
-<section>
+<section id="botoes">
   <div class="example-button-row">
-    <button mat-flat-button color="primary"> Buscar todas </button>
-    <button mat-flat-button color="accent"> Buscar por id </button>
-    <button mat-flat-button color="accent"> Buscar por pesquisador </button>
-    <button mat-flat-button color="warn"> Voltar </button>
+    <button mat-flat-button color="primary" (click)="buscarVacina()">Buscar todas</button>
+    <button mat-flat-button color="accent"  (click)="buscarPorId()">Buscar por id</button>
+    <button mat-flat-button color="accent"  (click)="buscarPorPesquisador()">Buscar por pesquisador</button>
+    <button mat-flat-button color="warn"    (click)="voltar()">Voltar</button>
   </div>
 </section>
 

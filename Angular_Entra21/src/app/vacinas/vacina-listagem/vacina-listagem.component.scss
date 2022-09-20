@@ -1,0 +1,31 @@
+table {
+  width: 90%;
+  margin: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+  display: inline;
+  align-items: center;
+  border-radius: 20px;
+}
+
+body {
+  align-items: center;
+}
+
+.cabecalho {
+  text-align: center;
+  font: normal 12pt Arial;
+  color: blue;
+
+}
+
+#botoes {
+  width: 1200px;
+  text-align: center;
+  background-color: aqua;
+}
