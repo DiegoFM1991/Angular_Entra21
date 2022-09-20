@@ -7,7 +7,7 @@ import { Vacina } from '../model/vacina';
   providedIn: 'root'
 })
 export class VacinasService {
-  private readonly API = 'http://localhost:8080/api/vacina'; // endpoint do servidor backend.
+  private readonly API = 'http://localhost:8080/vacina'; // endpoint do servidor backend.
 
   constructor(private HttpClient: HttpClient) { }
 
