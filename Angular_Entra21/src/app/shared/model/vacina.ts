@@ -1,8 +1,8 @@
-import { pesquisador } from "./pequisador";
+import { Pesquisador } from "./pequisador";
 export class Vacina {
-  id: Number;
+    id: Number;
   paisOrigem: string;
   estagioPesquisa: number;
   dataInicioPesquisa: Date;
-  responsavel: pesquisador;
+  responsavel: Pesquisador;
 }

@@ -1,5 +1,5 @@
-export class pesquisador{
-  id: number;
+export class Pesquisador{
+    id: number;
   nome: string;
   cpf: string;
   matricula: number;

@@ -1,0 +1,50 @@
+<mat-toolbar color="accent">
+    <span>Nova Vacina</span>
+</mat-toolbar>
+
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>País de Origem</mat-label>
+  <input matInput name="paisOrigem" type="text">
+        [(ngModel)]="vacina.paisOrigem"
+</mat-form-field>
+
+<mat-label>Estágio da pesquisa: </mat-label>
+<mat-radio-group [(ngModel)]="vacina.estagioPesquisa">
+    <mat-radio-button value="1">1 </mat-radio-button>
+    <mat-radio-button value="2">2 </mat-radio-button>
+    <mat-radio-button value="3">3 </mat-radio-button>
+</mat-radio-group>
+
+<br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Data de Início da Pesquisa: </mat-label>
+  <input matInput [matDatepicker]="picker"
+        [(ngModel)]="vacina.dataInicioPesquisa">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Pesquisador Responsável</mat-label>
+  <mat-select required [(ngModel)]="vacina.responsavel">
+    <mat-option>--</mat-option>
+    <mat-option *ngFor="let pesquisador of pesquisadores"
+                [value]="pesquisador">
+      {{pesquisador.nome}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<section>
+  <div class="example-button-row">
+    <button mat-flat-button color="primary"
+            (click)="salvar()">Salvar</button>
+
+            <button mat-flat-button color="accent"
+            (click)="limpar()">Limpar</button>
+  </div>
+</section>
+<pre>{{vacina | json}}</pre>

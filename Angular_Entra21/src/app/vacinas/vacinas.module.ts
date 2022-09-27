@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { VacinaListagemComponent } from './vacina-listagem/vacina-listagem.component';
 import { VacinasRoutingModule } from './vacinas-routing.module';
+import { VacinaDetalheComponent } from './vacina-detalhe/vacina-detalhe.component';
 
 @NgModule({
   declarations: [
-    VacinaListagemComponent
+    VacinaListagemComponent,
+    VacinaDetalheComponent
   ],
   imports: [
     CommonModule,

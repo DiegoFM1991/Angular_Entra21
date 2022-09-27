@@ -16,4 +16,9 @@ export class AppComponent {
     //TODO testar a rota
     this.router.navigate(['/vacinas']);
   }
+
+  public irParaTelaCadastroVacinas(){
+    //TODO testar a rota
+    this.router.navigate(['/vacinas/detalhe']);
+  }
 }
