@@ -1,3 +1,16 @@
+th {
+  font-weight: normal;
+  padding: 0;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+}
+
+td {
+  padding: 0;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+}
+
 table {
   width: 90%;
   margin-left: auto;
@@ -20,8 +33,8 @@ body {
 
 .cabecalho {
   text-align: center;
-  font: normal 12pt Arial;
-  color: blue;
+  font: bold 12pt Arial;
+  color: rgb(0, 0, 0);
 }
 
 #botoes {
