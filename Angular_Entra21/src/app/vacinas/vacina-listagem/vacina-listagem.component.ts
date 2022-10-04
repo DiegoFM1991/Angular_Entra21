@@ -10,9 +10,8 @@ import { VacinasService } from '../../shared/service/vacinas.service';
 })
 export class VacinaListagemComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'paisOrigem', 'estagio', 'dataInicio', 'responsavel'];
+  displayedColumns: string[] = ['id', 'paisOrigem', 'estagio', 'dataInicio', 'responsavel', 'acoes'];
   public dataSource: Array<Vacina> = new Array();
-
   constructor(private vacinaService: VacinasService, private router: Router) { }
 
   ngOnInit(): void {
@@ -30,6 +29,14 @@ export class VacinaListagemComponent implements OnInit {
         console.log("DEU ERRO. Causa: " + erro);
       }
     );
+  }
+
+  public editarVacina(vacinaSelecionada: Vacina){
+    this.router.navigate(['vacinas/detalhe/' + vacinaSelecionada.id]);
+  }
+
+  public excluirVacina(vacinaSelecionada: Vacina){
+    //TODO
   }
 
   public buscarPorId(){

@@ -15,7 +15,16 @@ export class VacinasService {
     return this.HttpClient.get<Vacina[]>(this.API);
   }
 
+  buscarPorId(id: number): Observable<Vacina>{
+    return this.HttpClient.get<Vacina>(this.API + '/detalhe/' + id);
+  }
+
   salvar(vacina: Vacina): Observable<Vacina>{
     return this.HttpClient.post<Vacina>(this.API, vacina);
   }
+
+  atualizar(vacina: Vacina):Observable<Vacina> {
+    return this.HttpClient.put<Vacina>(this.API, vacina);
+  }
+
 }

@@ -1,12 +1,12 @@
 th {
   font-weight: normal;
-  padding: 0;
+  padding: 0px;
   border-bottom: 1px;
   border-bottom-style: solid;
 }
 
 td {
-  padding: 0;
+  padding: 0px;
   border-bottom: 1px;
   border-bottom-style: solid;
 }
@@ -43,4 +43,11 @@ body {
   margin-right: auto;
   text-align: center;
   background-color: aqua;
+}
+
+.mat-cell {
+  justify-content: center;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  padding: 10px;
 }
